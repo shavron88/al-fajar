@@ -152,17 +152,22 @@ const Contact = () => {
             </form>
           </div>
 
-          {/* Map Section */}
-          <div className="map-section">
-            <div className="map-placeholder">
-              <div className="map-marker">
-                <i className="fas fa-map-marker-alt"></i>
-              </div>
-              <span className="country-label">Pakistan</span>
-            </div>
-          </div>
         </div>
+        <div className="map-section">
+          <iframe
+    title="Pakistan Office"
+    className="map-iframe"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217759.3246225027!2d74.2295!3d31.5204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190483f6b5a1e9%3A0xb42adfe6d71e0a1c!2sLahore%2C%20Pakistan!5e0!3m2!1sen!2s!4v1693400212345!5m2!1sen!2s"
+    width="100%"
+    height="400"
+    style={{ border: 0, borderRadius: '10px' }}
+    allowFullScreen=""
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
       </section>
+
 
       {/* Social Media Section */}
       <section className="social-section">

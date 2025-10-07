@@ -2,10 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
-import About from "./about";
+import About from "./About";
 import Services from "./Services";
 import Contact from "./Contact";
-import SolarBookingPage from "./SolarBookingPage";  // ✅ Add this import
+import SolarBookingPage from "./SolarBookingPage";
+import TestimonialsPage from "./TestimonialsPage";
 import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -16,10 +17,9 @@ root.render(
         <Route index element={<About />} />
         <Route path="services" element={<Services />} />
         <Route path="contact" element={<Contact />} />
-        <Route path="SolarBookingPage " element={<SolarBookingPage/>} />
-
+        <Route path="booking" element={<SolarBookingPage />} />
+        <Route path="testimonials" element={<TestimonialsPage />} />
       </Route>
     </Routes>
   </BrowserRouter>
 );
-

@@ -1,0 +1,4 @@
+- [x] Update routing in main.jsx: set index to Home, add /about for About
+- [x] Update Header.jsx: import Link, change links to proper paths
+- [x] Update App.jsx: replace nav with Header component, import Header
+- [ ] Test navigation

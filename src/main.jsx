@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
+import Home from "./Home";
 import About from "./About";
 import Services from "./Services";
 import Contact from "./Contact";
@@ -14,7 +15,8 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
-        <Route index element={<About />} />
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
         <Route path="services" element={<Services />} />
         <Route path="contact" element={<Contact />} />
         <Route path="booking" element={<SolarBookingPage />} />

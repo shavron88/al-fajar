@@ -1,13 +1,26 @@
-// import React from "react";
-// 
-// src/About.jsx
-import React from "react";                    
-import "./About.css";                         
-import ServiceCard from "./components/ServiceCard";  
+import React from "react";
+import { FaSolarPanel, FaLightbulb, FaGlobeAsia } from "react-icons/fa";
+import "./About.css";
+
+const ServiceCard = ({ icon, title, description, points }) => (
+  <div className="card">
+    <div className="icon">{icon}</div>
+    <h3>{title}</h3>
+    {points ? (
+      <ul>
+        {points.map((point, i) => (
+          <li key={i}>{point}</li>
+        ))}
+      </ul>
+    ) : (
+      <p>{description}</p>
+    )}
+  </div>
+);
 
 const About = () => {
   return (
-    <div>
+    <div className="about-page">
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
@@ -20,22 +33,23 @@ const About = () => {
       <section className="history">
         <h2>Company History</h2>
         <div className="timeline">
-          <div className="event"><span>2003</span></div>
-          <div className="event"><span>2005</span></div>
-          <div className="event"><span>2010</span></div>
-          <div className="event"><span>2015</span></div>
-          <div className="event"><span>2020</span></div>
+          {["2003", "2005", "2010", "2015", "2020"].map((year) => (
+            <div className="event" key={year}>
+              <span>{year}</span>
+            </div>
+          ))}
         </div>
         <div className="history-text">
           <p>
-            Founded in 2003, Al-Fajar Solar has been at the forefront of delivering
-            innovative solar solutions for homes and businesses. Over the years, we expanded
-            from small residential projects to nationwide solar energy consultancy and
-            large-scale installations.
+            Founded in 2003, Al-Fajar Solar has been at the forefront of
+            delivering innovative solar solutions for homes and businesses. Over
+            the years, we expanded from small residential projects to nationwide
+            solar energy consultancy and large-scale installations.
           </p>
           <p>
-            Our mission is to empower communities with clean, reliable, and affordable
-            renewable energy solutions, contributing towards a sustainable future.
+            Our mission is to empower communities with clean, reliable, and
+            affordable renewable energy solutions, contributing towards a
+            sustainable future.
           </p>
         </div>
       </section>
@@ -43,7 +57,7 @@ const About = () => {
       {/* Services Section */}
       <section className="services">
         <ServiceCard
-          icon="fa-solid fa-solar-panel"
+          icon={<FaSolarPanel size={40} color="#ffb703" />}
           title="Complete Solar Installation, Maintenance & Repair"
           points={[
             "Consultancy Services & Proposals",
@@ -53,13 +67,13 @@ const About = () => {
         />
 
         <ServiceCard
-          icon="fa-solid fa-lightbulb"
+          icon={<FaLightbulb size={40} color="#ffb703" />}
           title="Consultancy Services"
           description="We provide expert consultancy services for planning, designing, and implementing solar solutions tailored to your needs."
         />
 
         <ServiceCard
-          icon="fa-solid fa-earth-asia"
+          icon={<FaGlobeAsia size={40} color="#ffb703" />}
           title="Mission & Vision"
           description="Our mission is to make renewable energy accessible and affordable for everyone. We envision a greener planet powered by sustainable energy sources."
         />

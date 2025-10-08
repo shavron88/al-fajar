@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
-import About from "./about";
-import Services from "./Services";
+import About from "/about";
+
 import Contact from "./Contact";
 import SolarBookingPage from "./SolarBookingPage";  // ✅ Add this import
 import "./index.css";
@@ -14,7 +14,7 @@ root.render(
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<About />} />
-        <Route path="services" element={<Services />} />
+       
         <Route path="contact" element={<Contact />} />
         <Route path="SolarBookingPage " element={<SolarBookingPage/>} />
 

@@ -1,14 +1,14 @@
 /* General Styles */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
 }
 
 /* Hero Section */
 .hero {
-  background: url('./images/solar.jfif') no-repeat center center/cover;
+  background: url("./images/solar.jfif") no-repeat center center/cover;
   color: black;
   text-align: center;
   padding: 100px 20px;
@@ -17,12 +17,13 @@ body {
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 10px;
+  color: black;
 }
 
 .hero p {
   font-size: 1.2rem;
-  opacity: 0.9;
   color: whitesmoke;
+  opacity: 0.9;
 }
 
 /* History Section */
@@ -75,7 +76,7 @@ body {
   background: white;
   border-radius: 10px;
   padding: 25px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease;
 }
@@ -84,9 +85,7 @@ body {
   transform: translateY(-5px);
 }
 
-.card i {
-  font-size: 40px;
-  color: #ffb703;
+.card .icon {
   margin-bottom: 15px;
 }
 
@@ -134,9 +133,6 @@ body {
     justify-content: flex-start;
     padding: 10px 0;
   }
-  .timeline .event {
-    flex: 0 0 auto;
-  }
 }
 
 @media (max-width: 480px) {
@@ -155,7 +151,8 @@ body {
   .card h3 {
     font-size: 1.1rem;
   }
-  .card p, .card ul li {
+  .card p,
+  .card ul li {
     font-size: 0.85rem;
   }
 }

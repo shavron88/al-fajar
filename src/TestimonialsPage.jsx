@@ -1,5 +1,7 @@
 import React from "react";
 import "./TestimonialsPage.css";
+import { Link } from "react-router-dom";
+
 
 const testimonials = [
   {
@@ -109,7 +111,8 @@ export default function TestimonialsPage() {
       </div>
       <div className="cta-section">
         <h2>Want to be our next happy client?</h2>
-        <button className="cta-btn">Contact Us</button>
+        <Link to="/contact" className="cta-btn">Contact Us</Link>
+
       </div>
     </div>
   );

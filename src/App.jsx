@@ -1,20 +1,15 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
-import Header from "./components/Header";
-import "./App.css";
-import Contact from "./Contact";
 
+
+import React from "react";
+import Header from "./components/Header";
+import { Outlet } from "react-router-dom"; // 👈 Needed for nested routes
 
 function App() {
   return (
-    <div>
-      <Header />
-
-      {/* Page content will render here */}
-      <main className="page-content">
-        <Outlet />
-      </main>
-    </div>
+    <>
+      <Header />   {/* stays on all pages */}
+      <Outlet />   {/* where each page (Home, About, Contact, etc.) will render */}
+    </>
   );
 }
 
